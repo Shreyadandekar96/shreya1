@@ -1,0 +1,133 @@
+.blog-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.blogimg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+}
+
+.blog-subtitle{
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+
+.blog-head{
+    font-size: 60px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.blog-button{
+    margin-top: 20px;
+    padding: 12px 34px;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.blog-button:hover{
+    background: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.blog-para-head{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 90px 20px;
+
+    max-width: 1200px;
+    margin: 0 auto;       
+     /* ⭐ centers whole section */
+}
+
+.section1{
+    display: flex;
+    align-items: center;   /* ⭐ vertical alignment fix */
+    gap: 60px;
+
+    width: 100%;
+    padding: 25px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.section1:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.sec1{
+    width: 420px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: transform 0.4s ease;
+}
+
+.section1:hover .sec1{
+    transform: scale(1.05);
+}
+
+.sec-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.sec-head{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #04fa9c;
+}
+
+.sec-para{
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify; 
+}
+
+@media (max-width: 900px){
+
+    .section1{
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .sec1{
+        width: 100%;
+        height: 240px;
+    }
+
+    .sec-text{
+        max-width: 100%;
+    }
+
+    .blog-head{
+        font-size: 42px;
+    }
+}

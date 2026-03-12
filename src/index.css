@@ -1,0 +1,45 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, 
+    sans-serif;
+   
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+
+/* GOOGLE FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* RESET */
+body {
+  margin: 0;
+
+  /* Main website text font */
+  font-family: 'Inter', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Elegant serif for all headings automatically */
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+
+/* Optional: make buttons & navbar clean */
+button, nav, a {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Code font (keep as is) */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
