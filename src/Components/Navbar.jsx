@@ -32,7 +32,7 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav center-menu">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" to="/" end>
                 Home
               </NavLink>
             </li>
@@ -64,13 +64,21 @@ export const Navbar = () => {
 
             {/* DROPDOWN */}
             <li className="nav-item dropdown">
-              <a
+              {/* <a
                 className="nav-link dropdown-toggle"
                 href="#"
                 data-bs-toggle="dropdown"
               >
                 Dropdown
-              </a>
+              </a> */}
+
+              <button
+  className="nav-link dropdown-toggle btn btn-link"
+  data-bs-toggle="dropdown"
+  type="button"
+>
+  Dropdown
+</button>
               <ul className="dropdown-menu">
                 <li>
                   <NavLink className="dropdown-item" to="/action">

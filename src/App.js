@@ -1,23 +1,20 @@
-// import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Home } from "./Pages/Home";
-// import { About } from "./Pages/About";
 import { Navbar } from "./Components/Navbar";
 import { Offer } from "./Pages/Offer";
 import { Blog } from "./Pages/Blog";
 import { AboutUs } from "./Pages/AboutUs";
 import { Contact } from "./Pages/Contact";
-import {GalleryPage} from "./Pages/GalleryPage";
+import { GalleryPage } from "./Pages/GalleryPage";
 import { Action } from "./Pages/Action";
 import { AnotherAction } from "./Pages/AnotherAction";
 import { Something } from "./Pages/Something";
-// import { HeroImage } from "./Components/HeroImage";
 import { Footer } from "./Components/Footer";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
 
       <Routes>
@@ -30,10 +27,11 @@ function App() {
         <Route path="/action" element={<Action />} />
         <Route path="/AnotherAction" element={<AnotherAction />} />
         <Route path="/something" element={<Something />} />
+        <Route path="*" element={<Home />} />
       </Routes>
 
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 

@@ -1,3 +1,6 @@
+/* =========================
+   HEADING SECTION
+========================= */
 .heading-section {
   text-align: center;
   padding: 80px 20px;
@@ -7,7 +10,6 @@
 
 .heading1 {
   font-size: 3rem;
-  /* font-weight: 700; */
   margin-bottom: 18px;
 }
 
@@ -17,129 +19,123 @@
   line-height: 1.6;
 }
 
-
-.heading-container {
-  display: flex;
-  align-items: center;
-  /* vertical alignment */
-  justify-content: center;
-
-  gap: 60px;
-  /* space between image & text */
-
-  padding: 20px;
-}
-
-/* IMAGE */
-/* .heading-image {
-  flex: 1;
-} */
-
-
-
-.head-title {
-  color: rgb(5, 231, 126);
-  text-align: center;
-  margin-bottom: 30px;
-
-}
-
-
-
-
-
-
-.heading-img {
-  width: 300px;
-  /* decrease this value if needed */
-  height: auto;
-  border-radius: 10px;
-}
-
-
-/* PARAGRAPH */
-.heading-para {
-  max-width: 500px;
-  /* flex: 1; */
-}
-
-.heading-para p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #333;
-
-}
-
+/* =========================
+   HEADING CONTAINER
+========================= */
+.heading-container,
 .heading1-container {
-  /* margin-top: 2px; */
   display: flex;
   align-items: center;
-  /* vertical alignment */
   justify-content: center;
-
   gap: 60px;
-  /* space between image & text */
-
   padding: 20px;
+  flex-wrap: wrap; /* Make it wrap on smaller screens */
 }
 
-/* IMAGE */
-/* .heading-image {
-  flex: 1;
-} */
-
-
-
+/* TEXT STYLING */
+.head-title,
 .head1-title {
   color: rgb(5, 231, 126);
   text-align: center;
-  margin-bottom: 30px;
-
+  margin-bottom: 20px;
 }
 
-
-
-
-
-
-.car-image {
-  width: 300px;
-  /* decrease this value if needed */
-  height: auto;
-  border-radius: 10px;
-}
-
-
-/* PARAGRAPH */
+.heading-para,
 .heading1-para {
   max-width: 500px;
-  /* flex: 1; */
 }
 
+.heading-para p,
 .heading1-para p {
   font-size: 1.05rem;
   line-height: 1.7;
   color: #333;
-
 }
 
+/* IMAGE STYLING */
+.heading-img,
+.car-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
 
+/* =========================
+   ANIMATION
+========================= */
 .slide-left,
-.slide-right{
+.slide-right {
   opacity: 0;
   transition: all 0.9s ease;
 }
 
-.slide-left{
+.slide-left {
   transform: translateX(-80px);
 }
 
-.slide-right{
+.slide-right {
   transform: translateX(80px);
 }
 
-.show{
+.show {
   opacity: 1;
   transform: translateX(0);
 }
 
+/* =========================
+   RESPONSIVE MEDIA QUERIES
+========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .heading-container,
+  .heading1-container {
+    gap: 40px;
+  }
+
+  .heading-img,
+  .car-image {
+    width: 250px;
+  }
+
+  .heading1,
+  .head-title,
+  .head1-title {
+    font-size: 2.2rem;
+  }
+
+  .subheading1 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .heading-container,
+  .heading1-container {
+    flex-direction: column; /* Stack image & text */
+    gap: 20px;
+  }
+
+  .heading-img,
+  .car-image {
+    width: 90%; /* Responsive width */
+    max-width: 300px;
+  }
+
+  .heading1,
+  .head-title,
+  .head1-title {
+    font-size: 1.8rem;
+  }
+
+  .subheading1 {
+    font-size: 0.9rem;
+  }
+
+  .heading-para,
+  .heading1-para {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
